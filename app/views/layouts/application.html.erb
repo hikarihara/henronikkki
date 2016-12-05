@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>遍路日記</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Roboto::sans-serif' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+  <header class="header">
+  <ul class="main-nav">
+    <li><a href="/" ><%= image_tag("henlogo.png", :size => "86x24") %></a></li>
+    <% if user_signed_in? %>
+        <li>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
+          <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+          <li>
+          <a class="post" href="/nikkis/new">投稿する</a></li>
+      <% else %>
+          <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+      <% end %>
+  </ul>
+  </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>
+        Copyright 遍路日記 2016.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<div class="contents row" >
+  <% @nikkis.each do |nikki| %>
+  <div class="content_post">
+    <% if user_signed_in? && current_user.id == nikki.user_id %>
+    <div class="more">
+      <ul>
+        <li>
+        <%= link_to '編集', "/nikkis/#{nikki.id}/edit", method: :get %>
+        </li>
+        <li>
+          <%= link_to '削除', "/nikkis/#{nikki.id}", method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+    <div class="avatar-img"><%= image_tag nikki.user.avatar %></div>
+    <span class="nickname"><%= nikki.user.nickname %></span>
+    <span class="place">55 別宮山　金剛院　南光坊</span>
+    <p><%= simple_format(nikki.text) %></p>
+    <img class="img" src="<%= nikki.image %>" alt="">
+  </div>
+  <% end %>
+  <%= paginate(@nikkis) %>
+</div>
+

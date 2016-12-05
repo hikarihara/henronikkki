@@ -1,0 +1,205 @@
+@import "compass";
+
+$yellow: #FFC107;
+$lightGreen: #4DB6AC;
+$green: #009688;
+$darkGray: #4A4A4A;
+$gray: #9B9B9B;
+$lightGray: #F5F5F5;
+$white: white;
+
+@mixin boxBase($margin: 30px auto, $padding: 10px) {
+  margin: $margin;
+  padding: $padding;
+}
+@mixin basePadding($padding: 10px) {
+  padding: $padding;
+}
+@mixin baseMargin($margin: 10px auto) {
+  margin: $margin;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  font-family:Helvetica,Arial, Roboto, “Droid Sans”, “游ゴシック”, YuGothic,“ヒラギノ角ゴ ProN W3″,“Hiragino Kaku Gothic ProN”, “メイリオ”,Meiryo, sans-serif;
+}
+
+body{
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  color: $darkGray;
+  font-size: 16px;
+}
+
+ul li{
+  list-style: none;
+}
+
+h2{
+  color: $gray;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+
+a{
+  text-decoration: none;
+  color: $yellow;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
+
+header.header {
+  padding: 10px;
+  background-color: #009688;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  }
+
+.main-nav {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-nav li:first-child {
+  margin-right: auto;
+}
+.main-nav a {
+  margin: 10px;
+  border-radius: 5px;
+  color: $white;
+  display: block;
+  text-decoration: none;
+}
+
+  .contents{
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .content_post{
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto 20px;
+    background-color: $white;
+    display: block;
+    border-radius: 5px;
+  }
+
+  .more{
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: -16px;
+    ul{display: flex;
+      width: 60px;
+      margin-left: auto;}
+    li{padding-left: 5px;}
+    a{color: $gray;}
+  }
+
+  .avatar-img{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+    border-radius: 30px;
+  }
+
+  .nickname{
+    color: $gray;
+    font-size: 16px;
+    margin-bottom: -4px;
+    display: block;
+  }
+
+  .place{
+    font-size: 32px;
+    color: $green;
+    font-weight: lighter;
+  }
+
+  .img{
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .content_post p{
+    font-size: 24px;
+    padding: 4px 0;
+  }
+
+form {
+  @include boxBase(20px 0 ,30px);
+    background-color: $white;
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    h3 {
+      @include baseMargin(0 0 20px);
+      text-align: center;
+      font-weight: normal;
+      font-size: 20px;
+    }
+    input,textarea {
+      width: 100%;
+      @include boxBase(5px 0 15px ,10px);
+      border: 1px solid $gray;
+      border-radius: 5px;
+      font-family: "游ゴシック", "YuGothic";
+    }
+    input[type="submit"] {
+      background-color: $lightGray;
+      border-radius: 20px;
+      color: $white;
+      border: 0;
+      font-size: 18px;
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+  .success {
+    @include boxBase(20px 0 ,30px);
+    background-color: $white;
+    box-sizing: border-box;
+    text-align: center;
+    h3 {
+      @include baseMargin;
+      color: #979797;
+    }
+     a{
+      text-decoration: none;
+    }
+  }
+
+  .mypage{
+    display: block;
+    margin-bottom: 50px;
+    font-size: 28px;
+
+    p{
+
+    }
+  }
+
+
+
+  footer {
+    @include boxBase;
+    text-align: center;
+    color: $gray;
+  }
+

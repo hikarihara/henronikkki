@@ -1,0 +1,21 @@
+<div class="contents row" >
+  <div class="mypage">
+    <div class="avatar-img"><%= image_tag current_user.avatar %></div>
+    <p><%= @nickname %>さんの投稿一覧</p>
+  </div>
+  <% @nikkis.each do |nikki| %>
+  <div class="content_post">
+   <div class="avatar-img"><%= image_tag nikki.user.avatar %></div>
+   <span class="nickname"><%= @nickname %></span>
+   <span class="place">templetemple</span>
+   <p><%= simple_format(nikki.text) %></p>
+   <img class="img" src="<%= nikki.image %>" alt="">
+ </div>
+
+
+ <% end %>
+
+
+
+ <%= paginate(@nikkis) %>
+</div>
