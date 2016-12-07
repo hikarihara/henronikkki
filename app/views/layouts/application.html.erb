@@ -25,13 +25,15 @@
   <header class="header">
   <ul class="main-nav">
     <li><a href="/" ><%= image_tag("henlogo.png", :size => "86x24") %></a></li>
+    <li><a href="/temples/search"><%= image_tag("search_icon.png", :size => "18x18") %></a></li>
+          <li>
     <% if user_signed_in? %>
-        <li>
+          <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </li>
-          <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+          <li><a href="/users/<%= current_user.id %>"><%= image_tag("mypage_icon.png", :size => "20x25") %></a></li>
           <li>
-          <a class="post" href="/nikkis/new">投稿する</a></li>
+          <a class="post" href="/nikkis/new"><%= image_tag("checkin_icon.png", :size => "18x26") %></a></li>
       <% else %>
           <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
           <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>

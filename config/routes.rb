@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   delete  'nikkis/:id'  => 'nikkis#destroy'
   patch   'nikkis/:id'  => 'nikkis#update'
   get   'nikkis/:id/edit'  => 'nikkis#edit'
+  get 'temples/search/' => 'temples#search'
 end
