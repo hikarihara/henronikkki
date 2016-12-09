@@ -1,7 +1,7 @@
 <!-- <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span> -->
 <header class="search">
-<a href="../"><div class="icon_search"><%= image_tag("close_icon.png", :size => "20x20") %></div>
-  <h2>札所を検索</h2></a>
+<a href="../"><div class="icon_search"><%= image_tag("close_icon.png", :size => "20x20") %></div></a>
+  <h2>札所を検索</h2>
 </header>
 
 
@@ -19,7 +19,7 @@
   </h2>
   <ul class="listview">
     <% if @tempels.present? %>
-    <% @temples.each do |product| %>
+    <% @temples.each do |temple| %>
     <li>
       <a class="listview__element--right-icon" href="/temples/<%= temple.id %>/reviews/new" title="<%= temple.temple_name %>">
         <div class="position-right p1em">
