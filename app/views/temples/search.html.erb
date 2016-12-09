@@ -4,37 +4,24 @@
   <h2>札所を検索</h2>
 </header>
 
-
 <div class="search-form">
   <%= form_tag('/temples/search', method: :get) do %>
-  <input name="keyword" placeholder="札所名で検索" type="text" value=""><button title="検索" type="submit"><%= image_tag("search_icon.png", :size => "30x30") %></button></input>
+  <input name="keyword" placeholder="番所(半角数字)または札所名で検索" type="text" value=""><button title="検索" type="submit"><%= image_tag("search_icon.png", :size => "30x30") %></button></input>
   <% end %>
   <form accept-charset="utf-8" action="/" class="search-submit" method="get">
   </form>
 </div>
 
 <div class="result">
-  <h2 class="text-middle">
-    <i class="icon-movie color-gray-light"></i>検索結果
-  </h2>
   <ul class="listview">
-    <% if @tempels.present? %>
+    <% if @temples.present? %>
     <% @temples.each do |temple| %>
     <li>
-      <a class="listview__element--right-icon" href="/temples/<%= temple.id %>/reviews/new" title="<%= temple.temple_name %>">
-        <div class="position-right p1em">
-          <i class="icon-chevron-right color-sub"></i>
-        </div>
-        <div class="row no-space-bottom">
-          <div class="col6 push6">
-            <h3 class="text-middle text-break">
-              <span class="color-sub"><%= temple.title %></span>
-            </h3>
-            <p class="text-xsmall text-overflow">
-              <%= temple.address %>
-            </p>
+      <a href="/temples/<%= temple.id %>/reviews/new" title="<%= temple.temple_name %>">
+          <div class="result_column">
+            <h3><%= temple.temple_name %></h3>
+            <p><%= temple.address %></p>
           </div>
-        </div>
       </a>
     </li>
     <% end %>

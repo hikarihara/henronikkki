@@ -9,6 +9,6 @@ class TemplesController < ApplicationController
   end
 
   def search
-    @temples = Temple.where('temple_name LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @temples = Temple.where('temple_name LIKE(?)', "%#{params[:keyword]}%").limit(10)
   end
 end
