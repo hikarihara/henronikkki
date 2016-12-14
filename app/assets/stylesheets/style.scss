@@ -63,7 +63,7 @@ header.header {
   position: fixed;
   width: 100%;
   z-index: 5;
-  }
+}
 
 header.search{
   background-color: $green;
@@ -71,7 +71,6 @@ header.search{
   width: 100%;
   z-index: 5;
   padding: 30px 10px 0px 0px;
-  clear: both;
   h2{
     color: $white;
     text-align: center;
@@ -107,28 +106,28 @@ li.drop:hover ul{
   text-decoration: none;
 }
 
-  .contents{
-    padding-top: 130px;
-    margin: 0 auto;
-    width: 90%;
-  }
+.contents{
+  padding-top: 96px;
+  margin: 0 auto;
+  width: 90%;
+}
 
-  .content_post{
-    width: 100%;
-    padding: 10px;
-    margin: 0px auto 20px;
-    background-color: $white;
-    display: block;
-    border-radius: 5px;
-  }
+.content_post{
+  width: 96%;
+  padding: 2%;
+  margin: 20px auto;
+  background-color: $white;
+  display: block;
+  border-radius: 10px;
+}
 
-  .more{
-    text-align: right;
-    font-size: 1rem;
-    margin-bottom: -16px;
-    ul{display: flex;
-      width: 80px;
-      margin-left: auto;}
+.more{
+  text-align: right;
+  font-size: 1rem;
+  margin-bottom: -16px;
+  ul{display: flex;
+    width: 80px;
+    margin-left: auto;}
     li{padding-left: 5px;}
     a{color: $gray;}
   }
@@ -139,7 +138,8 @@ li.drop:hover ul{
     overflow: hidden;
     float: left;
     margin-right: 15px;
-    border-radius: 30px;
+    border-radius: 50px;
+    background-image: image-url("avator-bg.png");
   }
 
   .nickname{
@@ -157,7 +157,8 @@ li.drop:hover ul{
 
   .img{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
   }
 
   .content_post p{
@@ -165,8 +166,8 @@ li.drop:hover ul{
     padding: 4px 0;
   }
 
-form {
-  @include boxBase(20px 0 ,30px);
+  form {
+    @include boxBase(20px 0 ,30px);
     background-color: $white;
     width: 100%;
     margin: 0 auto;
@@ -176,7 +177,7 @@ form {
       @include baseMargin(0 0 20px);
       text-align: center;
       font-weight: normal;
-      font-size: 20px;
+      font-size: 2rem;
     }
     input,textarea {
       width: 100%;
@@ -222,12 +223,14 @@ form {
 
   .search-form {
     width: 100%;
-    padding-top: 110px;
+    padding: 110px 110px 0px 0px ;
+    margin: 0;
     background-color: $lightGreen;
     form{
       background-color: $lightGreen;
       padding: 5px;
       clear: both;
+      margin-left: 40px;
     }
     input{
       float: left;
@@ -261,6 +264,41 @@ form {
       text-decoration: none;
 
     }
+  }
+  .temple-top{
+    padding-top: 96px;
+  }
+
+  .temple-basic{
+    margin: 30px auto -40px;
+    width: 90%;
+
+    h1{
+      font-size: 3rem;
+      color: $green;
+    }
+  }
+
+  .temple-img{
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    background-color: $lightGreen;
+  }
+
+  .top-img {
+    display: inline-block;
+    height: 280px;
+    float: left;
+  }
+
+  .create-btn{
+    color: $green;
+    background-color: $white;
+    padding: 4px 30px;
+    margin: 20px 0;
+    border-radius: 20px;
+    font-size: 1.8rem;
   }
 
 

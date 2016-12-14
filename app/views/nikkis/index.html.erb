@@ -1,4 +1,4 @@
-<div class="contents row" >
+<div class="contents">
   <% @nikkis.each do |nikki| %>
   <div class="content_post">
     <% if user_signed_in? && current_user.id == nikki.user_id %>
@@ -13,9 +13,9 @@
       </ul>
     </div>
     <% end %>
-    <div class="avatar-img"><%= image_tag nikki.user.avatar %></div>
+    <div class="avatar-img"><%= image_tag(nikki.user.avatar, :width => "100" )%></div>
     <span class="nickname"><%= nikki.user.nickname %></span>
-    <span class="place">55 別宮山　金剛院　南光坊</span>
+    <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
     <img class="img" src="<%= nikki.image %>" alt="">
   </div>

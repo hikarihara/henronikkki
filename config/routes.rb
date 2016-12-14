@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   patch   'nikkis/:id'  => 'nikkis#update'
   get   'nikkis/:id/edit'  => 'nikkis#edit'
   get 'temples/search/' => 'temples#search'
-  get 'temples/:temple_id' => 'temples#show'
+  get 'temples/:id' => 'temples#show'
 
 end
