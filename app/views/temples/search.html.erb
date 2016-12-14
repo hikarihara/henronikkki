@@ -17,7 +17,7 @@
     <% if @temples.present? %>
     <% @temples.each do |temple| %>
     <li>
-      <a href="/temples/<%= temple.id %>/reviews/new" title="<%= temple.temple_name %>">
+      <a href="/temples/<%= temple.id %>/" title="<%= temple.temple_name %>">
           <div class="result_column">
             <h3><%= temple.temple_name %></h3>
             <p><%= temple.address %></p>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'temples/:temple_id/nikkis/new' => 'nikkis#new'
+  post 'temples/:temple_id/nikkis' => 'nikkis#create'
+
   devise_for :users
   root  'nikkis#index'
   get 'nikkis' => 'nikkis#index'
@@ -9,4 +13,6 @@ Rails.application.routes.draw do
   patch   'nikkis/:id'  => 'nikkis#update'
   get   'nikkis/:id/edit'  => 'nikkis#edit'
   get 'temples/search/' => 'temples#search'
+  get 'temples/:temple_id' => 'temples#show'
+
 end

@@ -1,0 +1,33 @@
+<header class="header header--section">
+  <h2 class="text-middle">
+    <i class="icon-movie color-gray-light"></i><%= @temple.temple_name %>
+  </h2>
+</header>
+
+<p style="text-align: center">
+</p>
+<div style="text-align: right">
+  <a href="/temples/<%= @temple.id %>/nikkis/new">ここでの思いを残す</a>
+</div>
+<header class="header header--section">
+  <h2 class="text-middle">
+    <i class="icon-movie color-gray-light"></i>みんなの思い
+  </h2>
+</header>
+<ul style="padding: 0">
+  <% @temple.nikkis.each do |nikki| %>
+  <li style="border-bottom: dotted 1px">
+    <div class="thumbnail__caption">
+     <h3 class="text-xsmall text-overflow" title="<%= review.user.nickname %>">
+      <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= nikki.user.nickname %><small 2014=""></small>
+    </h3>
+    <p class="text-small">
+      <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
+    </p>
+    <p>
+      <%= nikki.nikki %>
+    </p>
+  </div>
+</li>
+<% end %>
+</ul>
