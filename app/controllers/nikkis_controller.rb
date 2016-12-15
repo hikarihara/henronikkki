@@ -11,7 +11,7 @@
     end
 
     def create
-      Nikki.create(image: nikki_params[:image], text: nikki_params[:text], user_id: current_user.id)
+      Nikki.create(img: params[:img], text: nikki_params[:text], user_id: current_user.id, temple_id: params[:temple_id])
     end
 
     def destroy

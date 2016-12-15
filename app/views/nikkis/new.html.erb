@@ -4,6 +4,10 @@
       投稿する
     </h3>
     <input placeholder="Image Url" type="text" name="image">
+    <div class="field">
+          <%= file_field_tag :img %>
+          <%= hidden_field_tag :temple_id, params[:temple_id] %>
+    </div>
     <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
     <input type="submit" value="SENT">
   <% end %>
