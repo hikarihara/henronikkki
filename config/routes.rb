@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'temples/:temple_id/nikkis/new' => 'nikkis#new'
   post 'temples/:temple_id/nikkis' => 'nikkis#create'
 
-  devise_for :users
+  devise_for :users, controllers: {
+  registrations: 'users/registrations'
+}
   root  'nikkis#index'
   get 'nikkis' => 'nikkis#index'
   get 'nikkis/new' => 'nikkis#new'

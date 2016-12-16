@@ -13,8 +13,13 @@
       </ul>
     </div>
     <% end %>
-    <div class="avatar-img"><%= image_tag(nikki.user.avatar, :width => "100" )%></div>
-    <span class="nickname"><%= nikki.user.nickname %></span>
+    <div class="avatar-img">
+    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar, :width => "100" )%><% end %>
+    </div>
+    <span class="nickname">
+    <% if nikki.user.present? %><%= nikki.user.nickname %>
+    <% end %>
+    </span>
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.img.present? %>
