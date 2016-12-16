@@ -51,9 +51,6 @@ a{
   color: $green;
 }
 
-a:hover{
-  border-bottom:3px dashed;
-}
 
 
 
@@ -119,6 +116,10 @@ li.drop:hover ul{
   background-color: $white;
   display: block;
   border-radius: 10px;
+
+  a:hover{
+  border-bottom: 2px dashed;
+}
 }
 
 .more{
@@ -213,7 +214,7 @@ li.drop:hover ul{
 
   .mypage{
     display: block;
-    margin-bottom: 50px;
+    margin: 20px auto 80px;
     font-size: 28px;
 
     p{
