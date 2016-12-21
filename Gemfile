@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
 end
 
-gem 'pry-rails'
+  gem 'pry-rails'
   gem 'compass-rails','~> 2.0'
   gem 'sprockets', '2.11.0'
 
@@ -53,6 +53,23 @@ gem 'pry-rails'
 
   gem 'devise'
 
+  gem 'omniauth'
+
+  gem 'omniauth-facebook'
+  gem 'omniauth-twitter'
+
   gem 'paperclip'
+  gem 'aws-sdk'
+
+  group :production, :staging do
+  gem 'rails_12factor'
+  end
 
   gem 'mechanize'
+
+  group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+gem 'dotenv-rails'

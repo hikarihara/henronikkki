@@ -2,8 +2,8 @@
 <div class="temple-top">
   <div class="temple-img">
     <% @temple.nikkis.each do |nikki| %>
-    <% if nikki.img.present? %>
-    <img class="top-img" src="<%= nikki.img %>" alt="">
+    <% if nikki.image.present? %>
+    <img class="top-img" src="<%= nikki.image %>" alt="">
     <% end %>
     <% end %>
   </div>
@@ -36,8 +36,8 @@
     <% if nikki.user.present? %><%= nikki.user.nickname %>
     <% end %>
     <p><%= simple_format(nikki.text) %></p>
-    <% if nikki.img.present? %>
-    <img class="img" src="<%= nikki.img %>" alt="">
+    <% if nikki.image.present? %>
+    <img class="img" src="<%= nikki.image %>" alt="">
     <% end %>
   </div>
   <% end %>

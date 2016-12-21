@@ -22,8 +22,8 @@
     </span>
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
-    <% if nikki.img.present? %>
-    <img class="img" src="<%= nikki.img %>" alt="">
+    <% if nikki.image.present? %>
+    <img class="img" src="<%= nikki.image %>" alt="">
     <% end %>
   </div>
   <% end %>

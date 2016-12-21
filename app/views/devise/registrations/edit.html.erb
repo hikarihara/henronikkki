@@ -9,6 +9,11 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
   <div class="label">
           <%= f.label :'ニックネーム' %><br />
           <%= f.text_field :nickname, autocomplete: "off", :placeholder => 'ニックネームを入力' %></div>
@@ -36,10 +41,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <% if f.object.encrypted_password.present? %>
   <div class="field">
     <%= f.label :現在のパスワード %> <i>(更新するために現在のパスワードが必要です)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Update" %>

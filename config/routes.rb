@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   post 'temples/:temple_id/nikkis' => 'nikkis#create'
 
   devise_for :users, controllers: {
-  registrations: 'users/registrations'
+  registrations: 'users/registrations', omniauth_callbacks: "omniauth_callbacks"
 }
+
   root  'nikkis#index'
   get 'nikkis' => 'nikkis#index'
   get 'nikkis/new' => 'nikkis#new'
