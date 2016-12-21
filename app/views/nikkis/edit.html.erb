@@ -1,5 +1,5 @@
 <div class="contents">
-    <%= form_tag("/nikkis/#{@nikki.id}", method: :patch ) do %>
+    <%= form_tag("/nikkis/#{@nikki.id}", method: :patch ,  multipart: true ) do %>
       <h3>
         編集する
       </h3>
