@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-  validates :nickname, presence: true, uniqueness: true
+  # validates :nickname, presence: true, uniqueness: true
 
   def authenticated_image_url(style)
     avatar.s3_object(style).url_for(:read, :secure => true)
