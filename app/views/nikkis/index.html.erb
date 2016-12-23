@@ -14,10 +14,11 @@
     </div>
     <% end %>
     <div class="avatar-img">
-    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar, :width => "100" )%><% end %>
+    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar, :width => "100" ) if nikki.user.avatar.present? %><% end %>
     </div>
     <span class="nickname">
-    <% if nikki.user.present? %><%= nikki.user.nickname %>
+    <% if nikki.user.present? %>
+    <a href="/users/<%= nikki.user.id %>"><%= nikki.user.nickname %></a>
     <% end %>
     </span>
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>

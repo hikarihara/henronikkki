@@ -9,7 +9,9 @@
   </div>
   <div class="temple-basic">
   <h1><%= @temple.temple_name %></h1>
+  <% if user_signed_in? %>
   <a href="/temples/<%= @temple.id %>/nikkis/new" class="create-btn">ここでの思いを残す</a>
+  <% end %>
   </div>
 </div>
 
