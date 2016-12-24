@@ -4,7 +4,7 @@
 
     <h2>ログイン</h2>
 
-
+      <div class="registration">
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
@@ -17,13 +17,14 @@
 
       <% if devise_mapping.rememberable? -%>
         <div class="field">
-          <%= f.label :remember_me %><br />
+          <%= f.label :remember_me %>
           <%= f.check_box :remember_me %>
         </div>
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "ログイン" %>
+      </div>
       </div>
     <% end %>
   </div>

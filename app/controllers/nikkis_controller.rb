@@ -3,7 +3,7 @@
     before_action :move_to_index, except: :index
 
     def index
-      @nikkis = Nikki.includes(:user).page(params[:page]).per(3).order("created_at DESC")
+      @nikkis = Nikki.includes(:user).page(params[:page]).per(5).order("created_at DESC")
 
     end
 

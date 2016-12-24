@@ -1,4 +1,18 @@
+<% if user_signed_in? %>
+<% else %>
+<div class="top">
+  <h3>札所毎に思いをつづろう</h3>
+  <%= image_tag("henlogo_big.png", :size => "442x124") %>
+  <p>札所ごとにその瞬間のリアルな思いを残して、<br>自分だけの旅の書を作りましょう。<br>
+それぞれの思いを共有して励みあいましょう。</p>
+<%= link_to "登録はこちら", new_user_registration_path, class: 'post' %>
+</div>
+<% end %>
+<% if user_signed_in? %>
 <div class="contents">
+<% else %>
+<div class="contents-index">
+<% end %>
   <% @nikkis.each do |nikki| %>
   <div class="content_post">
     <% if user_signed_in? && current_user.id == nikki.user_id %>

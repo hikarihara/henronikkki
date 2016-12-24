@@ -2,9 +2,9 @@
 
 <div class="contents">
   <%= form_tag('/nikkis', method: :post, multipart: true) do %>
-    <h3>
+    <h2>
       投稿する
-    </h3>
+    </h2>
     <div class="field">
           <%= file_field_tag :image %>
           <%= hidden_field_tag :temple_id, params[:temple_id] %>

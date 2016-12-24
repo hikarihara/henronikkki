@@ -8,20 +8,23 @@ $gray: #9B9B9B;
 $lightGray: #F5F5F5;
 $white: white;
 
-@mixin boxBase($margin: 30px auto, $padding: 10px) {
-  margin: $margin;
-  padding: $padding;
-}
-@mixin basePadding($padding: 10px) {
-  padding: $padding;
-}
-@mixin baseMargin($margin: 10px auto) {
-  margin: $margin;
-}
+// @mixin boxBase($margin: 30px auto, $padding: 10px) {
+//   margin: $margin;
+//   padding: $padding;
+// }
+// @mixin basePadding($padding: 10px) {
+//   padding: $padding;
+// }
+// @mixin baseMargin($margin: 10px auto) {
+//   margin: $margin;
+// }
 
 *{
   padding: 0;
   margin: 0;
+}
+html{
+  width: 100%;
 }
 
 div {
@@ -41,9 +44,9 @@ ul li{
 
 h2{
   color: $darkGray;
-  margin-bottom: 30px;
+  margin: 30px auto;
   text-align: center;
-
+  font-size: 2rem;
 }
 
 a{
@@ -66,21 +69,6 @@ header.header {
   z-index: 5;
 }
 
-header.search{
-  background-color: $green;
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  padding: 30px 10px 0px 0px;
-  h2{
-    color: $white;
-    text-align: center;
-  }
-  .icon_search{
-    position: absolute;
-    padding: 10px 0px 0 30px;
-  }
-}
 
 li.drop ul{
   display: none;
@@ -112,6 +100,12 @@ li.drop:hover ul{
   margin: 0 auto;
   width: 90%;
 }
+.contents-index{
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 
 .content_post{
   width: 96%;
@@ -172,43 +166,61 @@ li.drop:hover ul{
   }
 
   form {
-    @include boxBase(20px 0 ,30px);
-    background-color: $white;
+    // @include boxBase(20px 0 ,30px);
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box;
 
     h3 {
-      @include baseMargin(0 0 20px);
+      // @include baseMargin(0 0 20px);
       text-align: center;
       font-weight: normal;
       font-size: 2rem;
     }
     input,textarea {
+      box-sizing: border-box;
       width: 100%;
-      @include boxBase(5px 0 15px ,10px);
+      font-size: 2.5rem;
+      padding: 5px;
+      margin: 0 auto 20px;
+      // @include boxBase(5px 0 15px ,10px);
       border: 1px solid $gray;
       border-radius: 5px;
       font-family: "游ゴシック", "YuGothic";
     }
+    // input#user_avatar{
+    //   border: none;
+    //   input{
+    //     border: 1px solid $gray;
+    //     background: $white;
+    //   }
+    // }
     input[type="submit"] {
-      background-color: $lightGray;
-      border-radius: 20px;
+      background-color: $green;
+      border-radius: 50px;
       color: $white;
       border: 0;
-      font-size: 18px;
+      font-size: 2.5rem;
+      padding: 5px 20px;
+      margin: 0 auto 10px;
+      width: 50%;
       &:hover {
-        background-color: $green;
+        background-color: $white;
+        color: $green;
       }
     }
   }
+
+  .registration{
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+
   .success {
-    @include boxBase(20px 0 ,30px);
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
     h3 {
-      @include baseMargin;
+      // @include baseMargin;
       color: #979797;
     }
      a{
@@ -220,29 +232,45 @@ li.drop:hover ul{
     display: block;
     margin: 20px auto 80px;
     font-size: 28px;
+  }
 
-    p{
-
+  header.search{
+    background-color: $green;
+    position: fixed;
+    width: 100%;
+    z-index: 7;
+    padding: 10px;
+    box-sizing: border-box;
+  h2{
+    color: $white;
+    text-align: center;
+    }
+  .icon_search{
+    position: absolute;
+    padding: 30px ;
     }
   }
 
-  .search-form {
+  .search-form{
     width: 100%;
-    padding: 110px 110px 0px 0px ;
-    margin: 0;
+    box-sizing: border-box;
+    padding-top: 145px;
+    padding-left: 40px;
     background-color: $lightGreen;
     form{
       background-color: $lightGreen;
+      box-sizing: border-box;
+      font-size: 3.0rem;
       padding: 5px;
       clear: both;
-      margin-left: 40px;
     }
     input{
       float: left;
-      width: 90%;
+      box-sizing: border-box;
+      width: 88%;
     }
     button{
-      padding-left: 10px;
+      padding-left: 15px;
       padding-top: 8px;
       background-color: transparent;
       border-style: none;
@@ -250,18 +278,21 @@ li.drop:hover ul{
     }
   }
 
+
   .result{
     .result_column{
+      box-sizing: border-box;
       width: 100%;
       background-color: $white;
       padding: 20px 40px;
       border-bottom: 2px solid $lightGray;
       h3{
         color: $green;
+        font-size: 2rem;
       }
       p{
         color: $gray;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
       }
     }
 
@@ -306,12 +337,39 @@ li.drop:hover ul{
     font-size: 1.8rem;
   }
 
+  .top{
+    background-image: image-url("top-bg.png");
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    h3{
+      font-size: 0.8rem;
+      margin-bottom: 50px;
+      color: $darkGray;
+    }
+
+    p{
+      margin: 50px 0px;
+      font-size: 0.7rem;
+      line-height: 0.7rem;
+      color: $darkGray;
+    }
+    a{
+      border: 5px solid $darkGray;
+      color: $darkGray;
+      padding: 5px 20px;
+    }
+  }
+
 
 
 
   footer {
-    @include boxBase;
+    // @include boxBase;
     text-align: center;
     color: $gray;
+    margin-top: 50px;
   }
 
