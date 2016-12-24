@@ -357,9 +357,10 @@ li.drop:hover ul{
       color: $darkGray;
     }
     a{
-      border: 2px solid $darkGray;
+      border: 3px solid $darkGray;
       color: $darkGray;
       font-size: 2rem;
+      font-weight: bold;
       padding: 5px 20px;
     }
   }
