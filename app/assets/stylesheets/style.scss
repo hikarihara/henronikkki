@@ -25,6 +25,7 @@ $white: white;
 }
 html{
   width: 100%;
+  background-color: $white;
 }
 
 div {
@@ -32,6 +33,7 @@ div {
 }
 
 body{
+  max-width: 1080px;
   margin: 0 auto;
   background-color: #F5F5F5;
   color: $darkGray;
@@ -65,7 +67,9 @@ header.header {
   padding: 10px;
   background-color: $green;
   position: fixed;
+  box-sizing: border-box;
   width: 100%;
+  max-width: 1080px;
   z-index: 5;
 }
 
@@ -76,6 +80,12 @@ li.drop ul{
 
 li.drop:hover ul{
   display: block;
+
+}
+
+a.drop:hover ul{
+  color: $green;
+  background-color: $white;
 }
 
 .main-nav {
@@ -110,6 +120,7 @@ li.drop:hover ul{
 .content_post{
   width: 96%;
   padding: 2%;
+  min-height: 190px;
   margin: 20px auto;
   background-color: $white;
   display: block;
@@ -156,6 +167,7 @@ li.drop:hover ul{
 
   .img{
     width: 100%;
+    max-width: 1080px;
     border-radius: 10px;
     margin-top: 20px;
   }
@@ -168,6 +180,7 @@ li.drop:hover ul{
   form {
     // @include boxBase(20px 0 ,30px);
     width: 100%;
+    max-width: 1080px;
     margin: 0 auto;
 
     h3 {
@@ -182,7 +195,6 @@ li.drop:hover ul{
       font-size: 2.5rem;
       padding: 5px;
       margin: 0 auto 20px;
-      // @include boxBase(5px 0 15px ,10px);
       border: 1px solid $gray;
       border-radius: 5px;
       font-family: "游ゴシック", "YuGothic";
@@ -195,6 +207,7 @@ li.drop:hover ul{
     //   }
     // }
     input[type="submit"] {
+      -webkit-appearance: none;
       background-color: $green;
       border-radius: 50px;
       color: $white;
@@ -212,6 +225,7 @@ li.drop:hover ul{
 
   .registration{
     width: 100%;
+    max-width: 1080px;
     margin: 0 auto 50px;
   }
 
@@ -238,6 +252,7 @@ li.drop:hover ul{
     background-color: $green;
     position: fixed;
     width: 100%;
+    max-width: 1080px;
     z-index: 7;
     padding: 10px;
     box-sizing: border-box;
@@ -372,6 +387,6 @@ li.drop:hover ul{
     // @include boxBase;
     text-align: center;
     color: $gray;
-    margin-top: 50px;
+    padding: 50px 0px;
   }
 
