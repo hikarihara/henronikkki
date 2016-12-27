@@ -80,12 +80,10 @@ li.drop ul{
 
 li.drop:hover ul{
   display: block;
-
 }
 
-a.drop:hover ul{
-  color: $green;
-  background-color: $white;
+a.post{
+  font-size: 2rem;
 }
 
 .main-nav {

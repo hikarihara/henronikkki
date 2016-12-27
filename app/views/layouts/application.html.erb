@@ -43,11 +43,11 @@
         <% if user_signed_in? %>
         <li class="drop"><a href="#"><%= image_tag("mypage_icon.png", :size => "40x50") %></a>
           <ul>
-            <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+            <li><a href="/users/<%= current_user.id %>" class="post" >マイページ</a></li>
             <li>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'post' %>
             </li>
-            <li><%= link_to 'プロフィール設定', edit_user_registration_path %></li>
+            <li><%= link_to 'プロフィール設定', edit_user_registration_path, class: 'post' %></li>
           </ul>
         </li>
         <% else %>
