@@ -27,7 +27,7 @@
     </div>
     <% end %>
     <div class="avatar-img">
-    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar, :width => "100" ) if nikki.user.avatar.present? %><% end %>
+    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar(:thumb)) if nikki.user.avatar.present? %><% end %>
     </div>
     <span class="nickname">
     <% if nikki.user.present? %>
@@ -37,7 +37,7 @@
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
-    <img class="img" src="<%= nikki.image %>" alt="">
+    <img class="img" src="<%= nikki.image(:large) %>" alt="">
     <% end %>
   </div>
   <% end %>

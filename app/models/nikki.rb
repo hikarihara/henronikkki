@@ -6,7 +6,7 @@ class Nikki < ActiveRecord::Base
                     :styles => {
                         :thumb  => "100x100",
                         :medium => "200x200",
-                        :large => "600x400"
+                        :large => "1000x>"
                     },
                     :storage => :s3,
                     :s3_region => "ap-northeast-1",

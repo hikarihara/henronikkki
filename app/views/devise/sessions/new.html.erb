@@ -1,4 +1,4 @@
-<div class="contents">
+rails<div class="contents">
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -25,6 +25,7 @@
       <div class="actions">
         <%= f.submit "ログイン" %>
       </div>
+      <%= link_to "twitterでログイン",  user_twitter_omniauth_authorize_path  %>
       </div>
     <% end %>
   </div>

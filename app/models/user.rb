@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar,
                     :styles => {
-                        :thumb  => "100x100",
+                        :thumb  => "100x100#",
                         :medium => "200x200",
                         :large => "600x400"
                     },
@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
   def self.from_omniauth(auth)
     # providerとuidでUserレコードを取得する
     # 存在しない場合は、ブロック内のコードを実行して作成する
-    where(auth.slice(:provider, :uid)).first_or_create do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       # auth.provider には "twitter"、
       # auth.uidには twitterアカウントに基づいた個別のIDが入っている
       # first_or_createメソッドが自動でproviderとuidを設定してくれるので、
