@@ -249,6 +249,7 @@ a.post{
     min-height: 100%;
     h3 {
       // @include baseMargin;
+      padding: 50px;
       color: #979797;
     }
      a{
@@ -397,16 +398,28 @@ a.post{
 
 
 
-
   footer {
     text-align: center;
     color: $gray;
     background-color: #F5F5F5;
-    width: 300px;
+    width: 770px;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -385px;
     padding: 20px 0px;
     position: absolute;
     bottom: 0;
+
+    a{
+      font-size: 1.5rem;
+      float: left;
+      text-align: center;
+      color: $darkGray;
+      padding-right: 10px;
+    }
+    p{
+      padding-left: 20px;
+      float: left;
+      font-size: 1.5rem;
+    }
   }
 
