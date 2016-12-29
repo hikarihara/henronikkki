@@ -1,17 +1,20 @@
 <div class="contents" >
   <div class="mypage">
-    <div class="avatar-img"><%= image_tag(@user.avatar, :width => "100" )%></div>
+    <div class="avatar-img"><%= image_tag(@user.avatar(:thumb)) if @user.avatar.present? %></div>
     <p><%= @user.nickname %></p>
+
+    <% if @user.nikkis.present? %>
     <a href="/temples/<%= @user.nikkis.last.temple_id %>/" ><span class="place"><small><%= Temple.find(@user.nikkis.last.temple_id).temple_name %>　<%= @user.nikkis.last.created_at.strftime("%Y/%m/%d") %></small></span></a>
+    <% end %>
   </div>
   <% @user.nikkis.each do |nikki| %>
   <div class="content_post">
-    <div class="avatar-img"><%= image_tag(@user.avatar, :width => "100" )%></div>
+    <div class="avatar-img"><%= image_tag(@user.avatar(:thumb)) if @user.avatar.present? %></div>
     <span class="nickname"><%= @user.nickname %></span>
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
-    <img class="img" src="<%= nikki.image %>" alt="">
+    <img class="img" src="<%= nikki.image(:large) %>" alt="">
     <% end %>
   </div>
 

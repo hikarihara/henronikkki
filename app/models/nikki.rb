@@ -5,7 +5,7 @@ class Nikki < ActiveRecord::Base
   has_attached_file :image,
                     :styles => {
                         :thumb  => "100x100",
-                        :medium => "200x200",
+                        :medium => "280x>",
                         :large => "1000x>"
                     },
                     :storage => :s3,
