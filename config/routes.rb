@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :nikkis
   get   'users/:id'   =>  'users#show'
   get 'info/privacy' => 'info#privacy'
+  get 'info/rule' => 'info#rule'
   get 'temples/search/' => 'temples#search'
   get 'temples/:id' => 'temples#show'
 
