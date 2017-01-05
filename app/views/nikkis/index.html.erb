@@ -2,7 +2,7 @@
 <% else %>
 <div class="top">
   <h3>札所毎に思いをつづろう</h3>
-  <%= image_tag("henlogo_big.png", :size => "442x124") %>
+  <%= image_tag("henlogo_big.png", :size => "442x124", :alt => "遍路日記") %>
   <p>お遍路中のリアルな思いやTIPSを残して<br>遍路日記を作りましょう。<br>手軽に投稿できてお遍路さん同士で<br>情報を共有し合えるので<br>きっともっとお遍路が楽しめます。</p>
 <%= link_to "登録はこちら", new_user_registration_path, class: 'post' %>
 </div>
@@ -27,7 +27,7 @@
     </div>
     <% end %>
     <div class="avatar-img">
-    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar(:thumb)) if nikki.user.avatar.present? %><% end %>
+    <% if nikki.user.present? %><a href="/users/<%= nikki.user.id %>"><%= image_tag(nikki.user.avatar(:thumb)) if nikki.user.avatar.present? %></a><% end %>
     </div>
     <span class="nickname">
     <% if nikki.user.present? %>

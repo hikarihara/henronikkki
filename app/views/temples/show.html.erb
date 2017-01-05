@@ -9,6 +9,7 @@
   </div>
   <div class="temple-basic">
   <h1><%= @temple.temple_name %></h1>
+  <p><%= @temple.address %></p>
   <% if user_signed_in? %>
   <a href="/temples/<%= @temple.id %>/nikkis/new" class="create-btn">ここでの思いを残す</a>
   <% end %>
@@ -32,10 +33,11 @@
     </div>
     <% end %>
     <div class="avatar-img">
-    <% if nikki.user.present? %><%= image_tag(nikki.user.avatar(:thumb)) if nikki.user.avatar.present?%><% end %>
+    <% if nikki.user.present? %><a href="/users/<%= nikki.user.id %>"><%= image_tag(nikki.user.avatar(:thumb)) if nikki.user.avatar.present?%></a><% end %>
     </div>
     <span class="nickname">
-    <% if nikki.user.present? %><%= nikki.user.nickname %>
+    <% if nikki.user.present? %>
+    <a href="/users/<%= nikki.user.id %>"><%= nikki.user.nickname %></a>
     <% end %>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
