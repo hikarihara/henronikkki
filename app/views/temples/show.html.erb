@@ -1,9 +1,9 @@
 
 <div class="temple-top">
   <div class="temple-img">
-    <% @temple.nikkis.each do |nikki| %>
+    <% @temple.nikkis.reverse.each do |nikki| %>
     <% if nikki.image.present? %>
-    <img class="top-img" src="<%= nikki.image(:medium) %>" alt="">
+    <img class="top-img" src="<%= nikki.image(:medium) %>" alt="<%= @temple.temple_name %>">
     <% end %>
     <% end %>
   </div>
@@ -12,13 +12,15 @@
     <p><%= @temple.address %></p>
     <% if user_signed_in? %>
     <a href="/temples/<%= @temple.id %>/nikkis/new" class="create-btn">ここでの思いを残す</a>
+    <% else %>
+    <%= link_to "ここでの思い出を残す", new_user_registration_path, class: 'create-btn' %>
     <% end %>
   </div>
 </div>
 
 <div class="contents">
 
-  <% @temple.nikkis.each do |nikki| %>
+  <% @temple.nikkis.reverse.each do |nikki| %>
   <div class="content_post">
     <% if user_signed_in? && current_user.id == nikki.user_id %>
     <div class="more">

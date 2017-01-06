@@ -77,23 +77,9 @@ header.header {
   max-width: 1080px;
   z-index: 5;
 }
-
-
-li.drop ul{
-  display: none;
-}
-
-li.drop:hover ul{
-  display: block;
-  text-align: right;
-}
-
-a.post{
-  font-size: 2rem;
-}
-
 .main-nav {
   display: flex;
+  height: 76px;
   width: 90%;
   margin: 0 auto;
 }
@@ -104,13 +90,51 @@ a.post{
 .main-nav li:first-child {
   margin-right: auto;
 }
-.main-nav a {
+.main-nav li {
   margin: 10px;
   border-radius: 5px;
-  color: $white;
-  display: block;
   text-decoration: none;
 }
+
+
+li.drop ul{
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px $gray;
+  padding: 10px;
+  display: none;
+  width: 300px;
+  margin-top: 30px;
+
+  li{
+    text-align: left;
+    a.post{
+      display: block;
+  font-size: 2rem;
+  text-align: left;
+  background-color: $white;
+  color: $green;
+}
+  }
+}
+
+li.drop:hover ul{
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: -270px;
+  text-align: right;
+}
+li.drop{
+  position: relative;
+}
+
+li.drop:hover{
+  text-align: right;
+  width: 40px;
+}
+
+
 
 .contents{
   padding-top: 96px;
@@ -185,6 +209,10 @@ a.post{
   .content_post p{
     font-size: 2.5rem;
     padding: 4px 0;
+  }
+
+  label{
+    font-size: 1.5rem;
   }
 
   form {
@@ -294,10 +322,11 @@ a.post{
       background-color: $lightGreen;
       box-sizing: border-box;
       font-size: 3.0rem;
-      padding: 5px;
+      padding: 10px;
       clear: both;
     }
     input{
+      padding: 10px;
       float: left;
       box-sizing: border-box;
       width: 88%;
@@ -337,6 +366,8 @@ a.post{
   }
   .temple-top{
     padding-top: 96px;
+    height: 500px;
+    overflow: hidden;
   }
 
   .temple-basic{
@@ -356,7 +387,7 @@ a.post{
 
   .temple-img{
     height: 280px;
-    width: 100%;
+    width: 150%;
     overflow: hidden;
     background-color: $lightGreen;
   }
@@ -384,20 +415,21 @@ a.post{
     padding-top: 180px;
     padding-bottom: 100px;
     h3{
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 50px;
       color: $darkGray;
     }
 
     p{
       margin: 50px 0px;
-      font-size: 1.0rem;
-      line-height: 1.0rem;
+      font-size: 1.5rem;
+      line-height: 2.0rem;
       color: $darkGray;
     }
     a{
       border: 3px solid $darkGray;
       color: $darkGray;
+      background-color: transparent;
       font-size: 2rem;
       font-weight: bold;
       padding: 5px 20px;
