@@ -18,6 +18,10 @@
           <%= f.label :'ニックネーム' %><br />
           <%= f.text_field :nickname, autocomplete: "off", :placeholder => 'ニックネームを入力' %></div>
 
+  <div class="label">
+          <%= f.label :'プロフィール' %><br />
+          <%= f.text_field :introduction, autocomplete: "off", :placeholder => 'プロフィールを入力' %></div>
+
   <div class="field">
     <%= f.label :'プロフィール画像' %><br />
     <%= f.file_field :avatar, autofocus: "off" %>
