@@ -41,12 +41,15 @@ body{
   margin: 0 auto;
   background-color: #F5F5F5;
   color: $darkGray;
-  font-size: 16px;
+  font-size: 10px;
   padding-bottom: 100px;
 }
 
 ul li{
   list-style: none;
+}
+h1{
+  font-size: 2rem;
 }
 
 h2{
@@ -100,7 +103,7 @@ header.header {
 li.drop ul{
   background-color: $white;
   border-radius: 5px;
-  box-shadow: 0px 10px 20px $gray;
+  box-shadow: 0px 5px 10px $gray;
   padding: 10px;
   display: none;
   width: 300px;
@@ -209,6 +212,10 @@ li.drop:hover{
   .content_post p{
     font-size: 2.5rem;
     padding: 4px 0;
+  }
+
+  .pagination{
+    font-size: 1.5rem;
   }
 
   label{
@@ -450,6 +457,10 @@ li.drop:hover{
 
   .privacy{
     padding: 20px 0px;
+    font-size: 1.5rem;
+    h3{
+      font-size: 1.8rem;
+    }
   }
 
 
@@ -458,9 +469,9 @@ li.drop:hover{
     text-align: center;
     color: $gray;
     background-color: #F5F5F5;
-    width: 770px;
+    width: 790px;
     left: 50%;
-    margin-left: -385px;
+    margin-left: -395px;
     padding: 20px 0px;
     position: absolute;
     bottom: 0;
@@ -478,4 +489,20 @@ li.drop:hover{
       font-size: 1.5rem;
     }
   }
+
+  @media screen and (max-width: 700px){
+
+  body{
+  position: relative;
+  max-width: 1080px;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  color: $darkGray;
+  font-size: 16px;
+  padding-bottom: 100px;
+}
+
+}
 

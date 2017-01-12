@@ -3,4 +3,6 @@ class InfoController < ApplicationController
   end
   def rule
   end
+  def about
+  end
 end
