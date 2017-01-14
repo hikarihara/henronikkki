@@ -44,7 +44,7 @@
     </span>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
-    <img class="img" src="<%= nikki.image(:large) %>" alt="">
+    <img class="img" src="<%= nikki.image(:large) %>" alt="<%= @temple.temple_name %>">
     <% end %>
     </div>
     <% end %>

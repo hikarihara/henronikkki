@@ -143,12 +143,14 @@ li.drop:hover{
   padding-top: 96px;
   margin: 0 auto;
   width: 90%;
+  padding-bottom: 80px;
   min-height: 100%;
 }
 
 .contents-index{
   padding-top: 30px;
   margin: 0 auto;
+  padding-bottom: 80px;
   width: 90%;
 }
 
@@ -445,6 +447,14 @@ li.drop:hover{
       line-height: 2.0rem;
       color: $darkGray;
     }
+    a.normal-btn{
+      border: none;
+      display: inline;
+      font-size: 1.0rem;
+      font-weight: lighter;
+      border-bottom: 2px dashed;
+      padding: 0;
+    }
     a{
       border: 3px solid $darkGray;
       color: $darkGray;
@@ -462,24 +472,74 @@ li.drop:hover{
       font-size: 1.8rem;
     }
   }
+  .top-about{
+    background-image: image-url("about-bg.png");
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 180px 5% 120px;
+    h1{
+      color: $darkGray;
+      font-size: 2.8rem;
+      text-align: left;
+    }
+  }
+
+  .about{
+    padding-bottom: 50px;
+    h2{
+      color: $green;
+      font-size: 2.0rem;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    h3{
+      font-size: 1.8rem;
+      margin-top: 12px;
+      margin-bottom: 8px;
+      small{
+        font-size: 1.2rem;
+      }
+    }
+    p{
+      font-size: 1.6rem;
+      text-align: justify;
+    }
+    a{
+      color: $lightGreen;
+
+    }
+  }
+
+  .reg-btn{
+    margin: 60px auto 0;
+    width: 500px;
+    text-align: center;
+    background-color: white;
+    color: #4db6ac;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 80px;
+  }
+
+  .more_link_box{
+    font-size: 1.8rem;
+  }
 
 
 
   footer {
-    text-align: center;
     color: $gray;
     background-color: #F5F5F5;
-    width: 790px;
-    left: 50%;
-    margin-left: -395px;
-    padding: 20px 0px;
+    margin: 0 auto;
+    padding: 50px 5% 30px;
     position: absolute;
     bottom: 0;
 
     a{
       font-size: 1.5rem;
       float: left;
-      text-align: center;
       color: $darkGray;
       padding-right: 10px;
     }
@@ -487,6 +547,12 @@ li.drop:hover{
       padding-left: 20px;
       float: left;
       font-size: 1.5rem;
+    }
+  }
+  .sns-share{
+    display: flex;
+    i{
+      padding: 5px;
     }
   }
 

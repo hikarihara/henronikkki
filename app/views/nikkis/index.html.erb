@@ -3,7 +3,8 @@
 <div class="top">
   <h3>札所毎に思いをつづろう</h3>
   <%= image_tag("henlogo_big.png", :size => "442x124", :alt => "遍路日記") %>
-  <p>お遍路中のリアルな思いや気づきを残して<br>遍路日記を作りましょう。<br>手軽に投稿できてお遍路さん同士で<br>情報を共有し合えるので<br>きっともっとお遍路が楽しめます。</p>
+  <p>札所ごとでの思いや気付きを綴って<br> 遍路日記を作りましょう！<br><a href="/info/index" class="normal-btn">もっと知る..</a></p>
+  
 <%= link_to "登録はこちら", new_user_registration_path, class: 'post' %>
 </div>
 <% end %>
@@ -37,7 +38,7 @@
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
     <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
-    <img class="img" src="<%= nikki.image(:large) %>" alt="">
+    <img class="img" src="<%= nikki.image(:large) %>" alt="<%= nikki.temple.temple_name %>">
     <% end %>
   </div>
   <% end %>

@@ -3,6 +3,6 @@ class InfoController < ApplicationController
   end
   def rule
   end
-  def about
+  def index
   end
 end

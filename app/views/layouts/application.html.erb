@@ -3,15 +3,15 @@
 <head>
   <title>遍路日記</title>
   <meta name=”keywords” content=”遍路日記,遍路,日記,お遍路,四国,札所,食事,ホスピタリティ,設備,民宿,八十八ヶ所,自分,到着,四国遍路”>
-  <meta name="description" content="札所毎で、お遍路中のリアルな思いや情報を残して遍路日記を作りましょう。手軽に投稿できて、お遍路さん同士で、お寺の設備やホスピタリティ、またトイレの清潔度や、近隣の食事処や民宿など、さまざま情報を共有し合えるので、きっともっとお遍路が快適なものになります。また、札所毎でリアルな思いを残せばお遍路が終わった後に振り返ることができるあなただけの”遍路日記”ができあがります。まだ、お遍路をしていない方は「遍路日記」を除けばきっと四国遍路に出発したくなるはずです！">
-   <meta property="og:image" content="" />
-    <meta property="og:description" content="札所毎で、お遍路中のリアルな思いや情報を残して遍路日記を作りましょう。" />
+  <meta name="description" content="札所ごとでの思いや気付きを綴って自分だけの遍路日記を作りましょう。手軽に投稿できて、お遍路さん同士で、お寺の設備やホスピタリティ、またトイレの清潔度や、近隣の食事処や民宿など、さまざま情報を共有し合えるので、きっともっとお遍路が快適なものになります。また、札所毎でリアルな思いを残せばお遍路が終わった後に振り返ることができるあなただけの”遍路日記”ができあがります。まだ、お遍路をしていない方は「遍路日記」を除けばきっと四国遍路に出発したくなるはずです！">
+   <meta property="og:image" content="assets/share-img.png" />
+    <meta property="og:description" content="札所ごとでの思いや気付きを綴って自分だけの遍路日記を作りましょう。" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@henronikki" />
     <meta name="twitter:creator" content="@henronikki" />
     <meta name="twitter:title" content="遍路日記" />
-    <meta name="twitter:description" content="札所毎で、お遍路中のリアルな思いや情報を残して遍路日記を作りましょう。" />
-    <meta name="twitter:image" content="assets/" />
+    <meta name="twitter:description" content="札所ごとでの思いや気付きを綴って自分だけの遍路日記を作りましょう。" />
+    <meta name="twitter:image" content="assets/share-img.png" />
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,6 +26,7 @@
   <%= favicon_link_tag 'apple-icon.jpg', rel: 'apple-touch-icon', type:'image/jpg' %>
 
   <%= stylesheet_link_tag 'application', :debug => true , media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
     <!-- <script type="text/javascript">
@@ -77,12 +78,17 @@
         <%= yield %>
 
         <footer>
-        <a href="/info/about">このサイト</a>
+        <div class="sns-share">
+          <a href="http://twitter.com/home?status=%e9%81%8d%e8%b7%af%e6%97%a5%e8%a8%98%20%40henronikki%20%0d%0ahttps%3a%2f%2fhenro%2dnikki%2eherokuapp%2ecom%2f" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+        </div>
+        <a href="/info/index">このサイト</a>
         <a href="/info/privacy">プライバシー規約</a>
         <a href=mailto:henronikki88@gmail.com>問い合わせ</a>
-          <p>
-            Copyright 遍路日記 2016.
-          </p>
-        </footer>
+        <p>
+          <i class="fa fa-copyright"></i>遍路日記 2016.
+        </p>
+      </footer>
       </body>
       </html>
+

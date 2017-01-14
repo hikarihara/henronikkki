@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get   'users/:id'   =>  'users#show'
   get 'info/privacy' => 'info#privacy'
   get 'info/rule' => 'info#rule'
-  get 'info/about' => 'info#about'
+  get 'info/index' => 'info#index'
   get 'temples/search/' => 'temples#search'
   get 'temples/:id' => 'temples#show'
 
