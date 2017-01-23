@@ -13,6 +13,20 @@
 <% else %>
 <div class="contents-index">
 <% end %>
+<!-- <div class="watched">
+  <h2>注目の札所</h2>
+  <div class="watched-column"></div>
+  <div class="watched-column"></div>
+  <div class="watched-column"></div>
+</div>
+<div class="watched">
+  <h2>注目のお遍路さん</h2>
+  <div class="flex">
+    <a href="https://henro-nikki.herokuapp.com/users/72"><div class="watched-column"><img src="" alt=""><p>スマちゃん</p><small>さん</small></div></a>
+    <a href="https://henro-nikki.herokuapp.com/users/72"><div class="watched-column"><img src="" alt=""><p>スマちゃん</p><small>さん</small></div></a>
+    <a href="https://henro-nikki.herokuapp.com/users/72"><div class="watched-column"><img src="" alt=""><p>スマちゃん</p><small>さん</small></div></a>
+  </div>
+</div> -->
   <% @nikkis.each do |nikki| %>
   <div class="content_post">
     <% if user_signed_in? && current_user.id == nikki.user_id %>
@@ -36,10 +50,10 @@
     <% end %>
     </span>
     <a href="/temples/<%= nikki.temple.id %>/" title="<%= nikki.temple.temple_name %>"><span class="place"><%= nikki.temple.temple_name %></span></a>
-    <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
     <img class="img" src="<%= nikki.image(:large) %>" alt="<%= nikki.temple.temple_name %>">
     <% end %>
+    <p><%= simple_format(nikki.text) %></p>
   </div>
   <% end %>
   <%= paginate(@nikkis) %>

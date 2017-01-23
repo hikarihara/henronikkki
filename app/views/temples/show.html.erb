@@ -42,10 +42,10 @@
       <a href="/users/<%= nikki.user.id %>"><%= nikki.user.nickname %></a>
       <% end %>
     </span>
-    <p><%= simple_format(nikki.text) %></p>
     <% if nikki.image.present? %>
     <img class="img" src="<%= nikki.image(:large) %>" alt="<%= @temple.temple_name %>">
     <% end %>
+    <p><%= simple_format(nikki.text) %></p>
     </div>
     <% end %>
 

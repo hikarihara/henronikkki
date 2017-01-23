@@ -48,12 +48,12 @@
   <body>
     <header class="header">
       <ul class="main-nav">
-        <li><a href="/" ><%= image_tag("henlogo.png", :size => "174x48", :alt => "遍路日記") %></a></li>
+        <li><a href="/" ><%= image_tag("henlogo.png", :size => "218x60", :alt => "遍路日記") %></a></li>
         <li>
-        <a href="/temples/search"><%= image_tag("search_icon.png", :size => "45x45") %></a>
+        <a href="/temples/search"><%= image_tag("search_icon.png", :size => "60x60") %></a>
         </li>
         <% if user_signed_in? %>
-        <li class="drop"><a href="#"><%= image_tag("mypage_icon.png", :size => "40x50") %></a>
+        <li class="drop"><a href="#"><%= image_tag("mypage_icon.png", :size => "48x60") %></a>
           <ul>
             <li><a href="/users/<%= current_user.id %>" class="post" >マイページ</a></li>
             <li>
@@ -64,7 +64,7 @@
         </li>
         <% else %>
         <li class="drop">
-          <a href="#"><%= image_tag("mypage_icon.png", :size => "40x50") %></a>
+          <a href="#"><%= image_tag("mypage_icon.png", :size => "48x60") %></a>
           <ul>
             <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
             <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
@@ -74,9 +74,10 @@
         <% end %>
       </ul>
     </header>
+    <div class="wrapper">
 
         <%= yield %>
-
+</div>
         <footer>
         <div class="sns-share">
           <a href="http://twitter.com/home?status=%e9%81%8d%e8%b7%af%e6%97%a5%e8%a8%98%20%40henronikki%20%0d%0ahttps%3a%2f%2fhenro%2dnikki%2eherokuapp%2ecom%2f" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
