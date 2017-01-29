@@ -189,6 +189,7 @@ li.drop:hover{
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
+  font-size: 1.8rem;
 }
 
 .contents-index{
@@ -214,8 +215,8 @@ li.drop:hover{
   }
   p{
     color: $darkGray;
-    padding: 10px 30px;
-    font-size: 3rem;
+    padding: 20px 30px 10px;
+    font-size: 2rem;
     font-weight: lighter;
   }
 }
@@ -223,7 +224,7 @@ li.drop:hover{
 .more{
   position: absolute;
   top: 30px;
-  right: 20px;
+  right: 30px;
   font-size: 1rem;
   ul{display: flex;}
     li{padding-left: 10px;}
@@ -243,11 +244,11 @@ li.drop:hover{
   }
 
   .nickname{
-    font-size: 2rem;
+    font-size: 2.0rem;
     color: $darkGray;
     font-weight: bold;
     a{
-    font-size: 2rem;
+    font-size: 2.0rem;
     color: $darkGray;
     font-weight: bold;
     }
@@ -257,9 +258,9 @@ li.drop:hover{
   }
 
   .place{
-    font-size: 3rem;
+    font-size: 3.0rem;
     a{
-    font-size: 3rem;
+    font-size: 3.0rem;
     color: $green;
     font-weight: lighter;
     }
@@ -339,17 +340,18 @@ li.drop:hover{
   }
 
   .success {
-    background-color: $white;
     box-sizing: border-box;
     text-align: center;
     min-height: 100%;
+    padding-bottom: 100px;
     h3 {
-      // @include baseMargin;
+      font-size: 2rem;
       padding: 50px;
-      color: #979797;
     }
      a{
+      font-size: 2rem;
       text-decoration: none;
+      padding-bottom: 100px;
     }
   }
 
@@ -507,7 +509,8 @@ li.drop:hover{
     a.normal-btn{
       border: none;
       display: inline;
-      font-size: 1.0rem;
+      margin-top: 20px;
+      font-size: 1.5rem;
       font-weight: lighter;
       border-bottom: 2px dashed;
       padding: 0;
@@ -533,7 +536,7 @@ li.drop:hover{
     background-image: image-url("about-bg.png");
     background-size: cover;
     box-sizing: border-box;
-    padding: 180px 5% 120px;
+    padding: 160px 5% 190px;
     h1{
       color: $darkGray;
       font-size: 2.8rem;

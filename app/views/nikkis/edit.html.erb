@@ -1,8 +1,8 @@
 <div class="contents">
     <%= form_tag("/nikkis/#{@nikki.id}", method: :patch ,  multipart: true ) do %>
-      <h3>
+      <h2>
         編集する
-      </h3>
+      </h2>
       <div class="field">
           <%= file_field_tag :image %>
       </div>
